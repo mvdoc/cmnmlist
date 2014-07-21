@@ -83,11 +83,11 @@ a:hover {
 }
 
 ul, ol {
-  padding: .5em 0em 1em 3.2em;
+  padding: 0em 0em 0em 3.2em;
 }
 ul li, ol li {
   line-height: 30px;
-  padding: 6px 0 0 0;
+  padding: 0 0 0 0;
 }
 
 strong {
