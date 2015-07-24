@@ -1,9 +1,8 @@
 {% extends "page.html" %}
-{% block title %} Publications {% endblock %}
 {% block content %}
 <header>
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>:
-        <a href="{{ SITEURL }}/pages/publications.html" id="page-title">Publications</a></h1>
+        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title }}</a></h1>
 </header>
 <navigationheader>
     <nav>
@@ -33,5 +32,8 @@
        {% endif %}
     {% endfor %}
     {% endwith %}
+    {% if page.content %}
+      <p>{{ page.content }}</p>
+    {% endif %}
 </div>
 {% endblock %}
