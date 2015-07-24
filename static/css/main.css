@@ -27,7 +27,6 @@ h1 {
   font-family: Helvetica, sans-serif;
   font-size: 1.5em;
   font-weight: normal;
-  margin-bottom: 0;
 }
 
 h2 {
@@ -65,8 +64,9 @@ blockquote {
 
 p {
   line-height: 1.8em;
-  margin: 1.5em auto;
+  margin: 0em auto 0em auto;
   text-indent: 0px;
+  text-align: justify;
 }
 p.caption {
   font-size: 80%;
@@ -83,11 +83,16 @@ a:hover {
 }
 
 ul, ol {
-  padding: 0.5em 0em 0em 1em;
+  padding: 0em 0em 0em 0em;
+  list-style-type: none;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
+
 ul li, ol li {
   line-height: 1.8em;
-  padding: 0 0em 1em 0;
+  padding: .5em 0em .5em 1em;
+  text-align: justify;
 }
 
 strong {
@@ -108,6 +113,11 @@ pre {
   padding: 10px;
 }
 
+center {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
 header {
   font-size: 1em;
   text-align: center;
@@ -118,15 +128,6 @@ header a {
 }
 header a#page-title {
   font-weight: bold;
-}
-
-#article-list {
-  margin-top: 100px;
-}
-#article-list ol li {
-  line-height: 1.2em;
-  list-style-type: none;
-  padding-bottom: 10px;
 }
 
 navigationheader {
@@ -142,8 +143,14 @@ navigationheader a {
   border-bottom: none;
   color: #c0c0c0;
 }
+
+navigationheader ul {
+ padding-top: 1em;
+ padding-bottom: 2em;
+}
 navigationheader li {
   display: inline;
+  padding: 0em 0em 0em 0em;
 }
 navigationheader p {
   font-size: 0.6em;
@@ -169,4 +176,13 @@ footer li {
 footer p {
   text-align: right;
   font-size: 0.2em;
+}
+
+#articlelist ul {
+ padding-top: 0px;
+ list-style-type: none;
+}
+
+#articlelist li {
+ text-align: justify
 }

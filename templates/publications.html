@@ -20,15 +20,18 @@
         </ul>
     </nav>
 </navigationheader>
-<article>
-    <ul>
-    {% for key, year, text, bibtex, pdf, slides, poster in publications %}
-    <li id="{{ key }}">{{ text }}
-    {% for label, target in [('PDF', pdf), ('Slides', slides), ('Poster', poster)] %}
-    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+<div id="articlelist">
+    {% with article_types = [('article', 'Articles'), ('techreport', 'Technical Reports'), ('misc', 'Theses')] %}
+    {% for article_type, article_title in article_types %}
+      {% if publications[article_type] %}
+        <strong>{{ article_title }}</strong>
+          <ul>
+            {% for key, year, text, bibtex, pdf, slides, poster in publications[article_type] %}
+              <li id="{{ key }}">{{ text }}</li>
+            {% endfor %}
+          </ul>
+       {% endif %}
     {% endfor %}
-    </li>
-    {% endfor %}
-    </ul>
-</article>
+    {% endwith %}
+</div>
 {% endblock %}
