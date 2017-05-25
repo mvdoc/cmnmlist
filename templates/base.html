@@ -25,8 +25,8 @@
 {% include 'github.html' %}
         {% block content %}
         {% endblock %}
-
         <navigationheader>
+          <hr class="top"/>
             <nav>
                 <ul>
                 {% for page in pages %}
@@ -40,6 +40,7 @@
                 {% endif %}
                 </ul>
             </nav>
+          <hr class="bottom"/>
             <p id="theme-credit">Personal mod of <a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a>,
             built using <a href="http://www.getpelican.com">Pelican</a></p>
         </navigationheader>

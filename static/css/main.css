@@ -14,25 +14,48 @@
 body {
   background: #fff;
   color: #333;
-  font: 1.1em Hoefler Text, bodyfont, serif;
-  line-height: 2em;
-  max-width: 40em;
+  font: 14pt Hoefler Text, bodyfont, serif;
+  line-height: 1.5em;
+  max-width: 35em;
   /* margin: 60px 14px 0 64px; */
   margin-left: auto;
   margin-right: auto;
 }
 
+article {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+hr {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd;
+}
+
+hr.top {
+  -webkit-margin-before: 0.6em;
+}
+hr.bottom {
+  -webkit-margin-after: 0.6em;
+}
+
 h1 {
   color: #333333;
   font-family: Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
 h2 {
   color: #666666;
   font-family: Helvetica, sans-serif;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 h3 {
@@ -44,12 +67,12 @@ h3 {
 h4 {
   color: #666666;
   font-family: Helvetica, sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 time {
   color: #c0c0c0;
-  font-size: 50%;
+  font-size: 0.8em;
 }
 
 img {
@@ -63,8 +86,9 @@ blockquote {
 }
 
 p {
-  line-height: 1.8em;
-  margin: 0em auto 0em auto;
+  /* line-height: 1.2em; */
+  font-size: 14pt;
+  margin: 0em 0em 0.4em 0em;
   text-indent: 0px;
   text-align: justify;
 }
@@ -74,8 +98,7 @@ p.caption {
 }
 
 a {
-  border-bottom: #999 1px solid;
-  color: #303030;
+  color: #54767c;
   text-decoration: none;
 }
 a:hover {
@@ -83,21 +106,19 @@ a:hover {
 }
 
 ul, ol {
-  padding: 0em 0em 0em 0em;
-  list-style-type: none;
+  margin-left: 0em;
+  margin-right: 1em;
   margin-top: 0em;
   margin-bottom: 0em;
 }
 
 ul li, ol li {
-  line-height: 1.8em;
-  padding: .5em 0em .5em 1em;
+  /* line-height: 1.2em; */
+  padding: 0em 0em 0.3em 0em;
   text-align: justify;
 }
 
 strong {
-  color: #555555;
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
@@ -114,14 +135,13 @@ pre {
 }
 
 center {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 header {
   font-size: 1em;
   text-align: center;
-  margin-bottom: -1em;
 }
 header a {
   border-bottom: none;
@@ -134,8 +154,8 @@ navigationheader {
   background: #fff;
   color: #666;
   font-family: helvetica, sans-serif;
-  font-size: 0.9em;
-  letter-spacing: 0.3em;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
   text-align: center;
   /* margin-left: 20px; */
 }
@@ -145,8 +165,8 @@ navigationheader a {
 }
 
 navigationheader ul {
- padding-top: 1em;
- padding-bottom: 2em;
+ padding-top: 0em;
+ padding-bottom: 0em;
 }
 navigationheader li {
   display: inline;

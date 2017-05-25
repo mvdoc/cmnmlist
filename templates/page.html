@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
-{% block content %}        
+{% block content %}
 <header>
-    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>:
-        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title }}</a></h1>
+    <h1>{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}:
+        <strong>{{ page.title }}</strong></h1>
 </header>
 <navigationheader>
+    <hr class="top"/>
     <nav>
         <ul>
         {% for page in pages %}
             <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>{% if not loop.last %} ::{% endif %}</li>
         {% endfor %}
-        {% if categories|length > 1 %}
-            <li>:: <a href="{{ SITEURL }}/categories.html">Categories</a></li>
-        {% endif %}
-        {% if tags|length > 1 %}
-            <li>:: <a href="{{ SITEURL }}/tags.html">Tags</a></li>
-        {% endif %}
         </ul>
     </nav>
+    <hr class="bottom"/>
 </navigationheader>
-<article>    
+<article>
     {{ page.content }}
 </article>
 {% endblock %}
