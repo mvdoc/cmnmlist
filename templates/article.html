@@ -18,7 +18,13 @@
 </navigationheader>
 <article>
     <p><strong>{{ article.title }}</strong></p>
+    <p class="subtitle">
+    by {{ article.author }}<br>
+    {% if not HIDE_DATE %}{{ article.locale_date }}{% endif %}
+    </p>
     {{ article.content }}
-    {% if not HIDE_DATE %}<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>{% endif %}
+    <p class="feedback">If you have feedback on this post, please let me know!
+      Send me a <a href="https://twitter.com/intent/tweet?text=.%20@{{ TWITTER_USERNAME }}%20{{ SITEURL }}/{{ article.url }}">tweet</a> or an email at mvdoc.gr<span
+style="display:none">obfuscatemyemail!</span>@dartmouth.edu.</p>
 </article>
 {% endblock %}

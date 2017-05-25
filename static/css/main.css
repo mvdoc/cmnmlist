@@ -97,6 +97,22 @@ p.caption {
   margin-top: 0;
 }
 
+p.subtitle {
+  font-size: 0.8em;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+p.feedback {
+  font-size: 0.6em;
+  font-weight: bold;
+  text-align:left;
+  margin-bottom: -1em;
+}
+p.article {
+  margin-top: 0em;
+}
+
 a {
   color: #54767c;
   text-decoration: none;
@@ -125,13 +141,15 @@ strong {
 tt, pre {
   background-color: #fafafa;
   font-family: Inconsolata, Monaco, monospace;
+  font-size: 10pt;
   line-height: 1.2em;
 }
 
 pre {
-  font-size: 0.8em;
+  font-size: 10pt;
   overflow: auto;
-  padding: 10px;
+  padding: 1em;
+  margin-top: 0.5em;
 }
 
 center {

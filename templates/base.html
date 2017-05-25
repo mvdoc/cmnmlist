@@ -4,6 +4,8 @@
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}?v=0.1" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/solarized-prettify.css">
+        <script type="text/javascript" src="{{ SITEURL }}/theme/google-code-prettify/prettify.js"></script>
         <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
         {% if FEED_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
@@ -21,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="PR.prettyPrint()">
 {% include 'github.html' %}
         {% block content %}
         {% endblock %}
